@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioClip;
 
-    void Fire()
+    public void Fire()
     {
         GameObject spawnedBullet = Instantiate(bullet, barrel.position, barrel.rotation);
         spawnedBullet.GetComponent<Rigidbody>().velocity = speed * barrel.forward;
